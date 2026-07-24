@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Animasi 2D |vonayt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Library lazy load: video baru mulai download saat masuk area layar -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">vonayt</div>
+        <ul class="nav-links">
+            <li><a href="javascript:void(0);" onclick="showPage('animation')">animation</a></li>
+            <li><a href="javascript:void(0);" onclick="showPage('about')">about me</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="page-animation" class="portfolio-grid">
+
+    <!-- ====================================================================
+         POLA SATU ITEM PORTOFOLIO — copy blok <div class="portfolio-item">
+         ini untuk setiap video baru yang mau kamu tambahkan.
+         Lihat README.md untuk penjelasan tiap bagian.
+         ==================================================================== -->
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/Yuta Vs Yuji Part 1.mp4', 'Yuta Vs Yuji Part 1 (fan animation) ', 'Directing,2d Animation, Compositing')">
+        <video class="lazy video-preview"
+               data-src="videos/Yuta Vs Yuji Part 1.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 4) this.currentTime = 0;"></video>
+        <div class="overlay">
+            <h3>Jujutsu Kaisen</h3>
+            <p>Yuji vs Yuta part 1</p>
+        </div>
+    </div>
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/Yuta Vs Yuji Part 2.mp4', 'Yuta Vs Yuji Part 2 (fan animation) ', 'Directing, 2d animation, compositing,')">
+        <video class="lazy video-preview"
+               data-src="videos/Yuta Vs Yuji Part 2.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 11) this.currentTime = 5.5;"></video>
+        <div class="overlay">
+            <h3>Jujutsu Kaisen</h3>
+            <p>Yuji vs Yuta part 2</p>
+        </div>
+    </div>
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/Yuta Vs Yuji Part 3 End.mp4', 'Yuta Vs Yuji Part 3 (fan animation) ', 'Directing, 2d animation, compositing,')">
+        <video class="lazy video-preview"
+               data-src="videos/Yuta Vs Yuji Part 3 End.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 16) this.currentTime = 9;"></video>
+        <div class="overlay">
+            <h3>Jujutsu Kaisen</h3>
+            <p>Yuji vs Yuta part 3</p>
+        </div>
+    </div>
+    <div class="portfolio-item"
+         onclick="openModal('videos/Reze Transformasi .mp4', 'Reze Transformasi (fan animation) ', '2d animation')">
+        <video class="lazy video-preview"
+               data-src="videos/Reze Transformasi .mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 6) this.currentTime = 0;"></video>
+        <div class="overlay">
+            <h3>Chainsaw Man</h3>
+            <p>Reze Transformasi</p>
+        </div>
+    </div>
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/Chihiro Vs Sojo Intro.mp4', 'Chihiro Vs Sojo Intro (fan animation) ', '2D Key animation')">
+        <video class="lazy video-preview"
+               data-src="videos/Chihiro Vs Sojo Intro.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 5.5) this.currentTime = 0;"></video>
+        <div class="overlay">
+            <h3>Kagurabachi</h3>
+            <p>Chihiro vs Sojo Intro</p>
+        </div>
+    </div>
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/Yuji_punch_sukuna.mp4', 'Yuji Punch Sukuna (fan animation) ', '2D Key animation')">
+        <video class="lazy video-preview"
+               data-src="videos/Yuji_punch_sukuna.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 4) this.currentTime = 2;"></video>
+        <div class="overlay">
+            <h3>Jujutsu Kaisen</h3>
+            <p>Yuji Keep Strong</p>
+        </div>
+    </div>
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/Subaru_aura_Farming.mp4', 'Subaru\'s Aura (fan animation) ', '2D Key animation ')">
+        <video class="lazy video-preview"
+               data-src="videos/Subaru_aura_Farming.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 2.8) this.currentTime = 1.8;"></video>
+        <div class="overlay">
+            <h3>Re:Zero</h3>
+            <p>Subaru's Aura</p>
+        </div>
+    </div>
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/Run 08 Fix.mp4', 'Run 08 Fix (fan animation) ', '2d animation')">
+        <video class="lazy video-preview"
+               data-src="videos/Run 08 Fix.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 4) this.currentTime = 0;"></video>
+        <div class="overlay">
+            <h3>OG Charakter</h3>
+            <p>Run 08 </p>
+        </div>
+    </div>
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/Naruto Vs Sasuke.mp4', 'Naruto Vs Sasuke (fan animation) ', 'directing, 2d animation, compositing')">
+        <video class="lazy video-preview"
+               data-src="videos/Naruto Vs Sasuke.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 25) this.currentTime = 18.8;"></video>
+        <div class="overlay">
+            <h3>Naruto  </h3>
+            <p>Naruto vs Sasuke</p>
+        </div>
+    </div>
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/Asl Jalan.mp4', 'ASL (fan animation) ', '2d animation')">
+        <video class="lazy video-preview"
+               data-src="videos/Asl Jalan.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 4) this.currentTime = 0;"></video>
+        <div class="overlay">
+            <h3>One Piece</h3>
+            <p>Kids Ace, Sabo, Luffy</p>
+        </div>
+    </div>
+
+    <div class="portfolio-item"
+         onclick="openModal('videos/088.mp4', 'Judul Karya', '2d animation')">
+        <video class="lazy video-preview"
+               data-src="videos/088.mp4"
+               autoplay loop muted playsinline
+               ontimeupdate="if(this.currentTime >= 4) this.currentTime = 0;"></video>
+        <div class="overlay">
+            <h3>OG CHarakter </h3>
+            <p>08</p>
+        </div>
+    </div>
+</main>
+
+<section id="page-about" class="about-grid-container">
+    <div class="about-left-content">
+        <h1>HELLO :)</h1>
+        <p>I'm vonayt. I like making art, especially illustrations and 2D frame-by-frame animations.</p>
+        </p></p>
+
+        <div class="about-contact-box">
+            <span class="contact-label">contact me for work !</span>
+            <a href="mailto:emailkamu@gmail.com" class="email-text-link">ikhwanayatullha633@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="about-right-image">
+        <img src="images/mural.jpg" loading="lazy" alt="Artwork">
+    </div>
+</section>
+
+<footer class="footer-social">
+    <div class="social-links-text">
+       
+        
+    
+    </div>
+</footer>
+
+<div id="videoModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div id="modalMedia"></div>
+        <div class="modal-text">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    function showPage(pageId) {
+        const pageAnim = document.getElementById('page-animation');
+        const pageAbout = document.getElementById('page-about');
+        if (!pageAnim || !pageAbout) return;
+
+        if (pageId === 'animation') {
+            pageAnim.style.setProperty('display', 'grid', 'important');
+            pageAbout.style.setProperty('display', 'none', 'important');
+        } else if (pageId === 'about') {
+            pageAnim.style.setProperty('display', 'none', 'important');
+            pageAbout.style.setProperty('display', 'flex', 'important');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        showPage('animation');
+
+        // Inisialisasi lazy load untuk semua elemen dengan class "lazy"
+        window.lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy",
+            threshold: 200
+        });
+    });
+</script>
+</body>
+</html>
