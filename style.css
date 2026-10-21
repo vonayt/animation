@@ -71,21 +71,20 @@ header nav {
 
 /* --- GRID PORTOFOLIO --- */
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     margin: 0;
 }
-
 .portfolio-item {
     position: relative;
+    flex: 0 0 25%;
     aspect-ratio: 4 / 3;
     background-color: #000;
     overflow: hidden;
     cursor: pointer;
 }
-
 .portfolio-item video,
 .portfolio-item img {
     width: 100%;
@@ -93,15 +92,14 @@ header nav {
     object-fit: cover;
     display: block;
 }
-
 @media (max-width: 1440px) {
-    .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+    .portfolio-item { flex: 0 0 33.3333%; }
 }
 @media (max-width: 1150px) {
-    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+    .portfolio-item { flex: 0 0 50%; }
 }
 @media (max-width: 600px) {
-    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-item { flex: 0 0 100%; }
 }
 
 /* --- OVERLAY HOVER --- */
